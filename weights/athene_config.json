@@ -1,0 +1,38 @@
+{
+  "model": "athene",
+  "teacher": "athene_bubo.onnx",
+  "student": "athene_strix.onnx",
+  "blend": {
+    "teacher": 0.7,
+    "student": 0.3
+  },
+  "tta_views": 4,
+  "threshold_fpr002": 0.60,
+  "preprocessing": {
+    "center_square_crop": true,
+    "resize": 256,
+    "center_crop": 224,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "spec": {
+    "test_auc": 0.988,
+    "ext_unseen_auc": 0.9319,
+    "ideogram_recall_fpr002": 0.435,
+    "dalle3_recall_fpr002": 0.47,
+    "precision_at_p095_gate": 0.92,
+    "known_limits": [
+      "classical-painting domain: inverted",
+      "danbooru-style anime diffusion: weak",
+      "unseen generators at strict fpr: ~half detected"
+    ]
+  }
+}
