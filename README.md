@@ -5,9 +5,6 @@ Add this section to the README (it slots in after the Quick start section, repla
 ---
 
 ## Setup
-
-### Option A — run from source (recommended)
-
 ```bash
 git clone https://github.com/YOURNAME/athene.git
 cd athene
