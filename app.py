@@ -43,8 +43,8 @@ def predict(img):
         ls = sess_s.run(None, {"input": v[None].astype(np.float32)})[0][0]
         ps.append(0.7 * p1(lt) + 0.3 * p1(ls))
     p = float(np.mean(ps))
-
-    if p > 0.95 or p < 0.05:
+    verdict = "ai" if p > THR else "human"
+    if p > 0.90 or p < 0.2:
         verdict, advice = ("AI-generated" if p > 0.5 else "Human-made"), "confident"
     else:
         verdict = "AI-generated" if p > THR else "Human-made"
