@@ -10,15 +10,14 @@ AI Art detector
 
 ## Setup
 ```bash
-
 git clone https://github.com/crwuBlyea/Athene.git
 cd athene
-```bash
-```bash
+```
+```baxh
 py -m venv venv
 pip install -r requirements.txt
 python app.py
-```bash
+```
 
 Open http://127.0.0.1:7860 in your browser.
 
