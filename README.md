@@ -1,7 +1,5 @@
 # Athene
 AI Art detector
-Add this section to the README (it slots in after the Quick start section, replacing or extending it):
-
 ---
 
 ## Setup
