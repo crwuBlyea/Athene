@@ -10,9 +10,11 @@ AI Art detector
 
 ## Setup
 ```bash
+
 git clone https://github.com/YOURNAME/athene.git
 cd athene
 
+py -m venv venv
 pip install -r requirements.txt
 python app.py
 ```
