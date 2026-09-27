@@ -1,4 +1,4 @@
-# Athene
+# Athene V0.5
 AI Art detector
 ---
 ### Requirements
