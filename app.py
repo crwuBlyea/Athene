@@ -44,7 +44,7 @@ def predict(img):
         ps.append(0.7 * p1(lt) + 0.3 * p1(ls))
     p = float(np.mean(ps))
     verdict = "ai" if p > THR else "human"
-    if p > 0.90 or p < 0.2:
+    if p > 0.95 or p < 0.3:
         verdict, advice = ("AI-generated" if p > 0.5 else "Human-made"), "confident"
     else:
         verdict = "AI-generated" if p > THR else "Human-made"
@@ -60,13 +60,12 @@ demo = gr.Interface(
     outputs=[gr.Label(num_top_classes=2, label="verdict"),
              gr.Text(label="details")],
     title="🦉 Athene — AI-art detector",
-    description=("Detects AI-generated digital art (anime, illustration, concept art). "
-                 "Calibrated probabilities — they mean what they say."),
+    description=("Detects AI-generated digital art (anime, illustration, concept art)."),
     article=("**Tested on:** Midjourney, Civitai/SD, Ideogram, DALL-E 3 · "
              "**Fails on:** classical painting scans · "
              "**Borderline results** mean exactly that: human review recommended. "
              "At strict settings ~half of unseen-generator AI is caught — "
-             "that's the field's frontier, stated honestly."),
+             "that's the field's frontier"),
 )
 
 demo.launch(theme=gr.themes.Base())

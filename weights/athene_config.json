@@ -7,7 +7,7 @@
     "student": 0.3
   },
   "tta_views": 4,
-  "threshold_fpr002": 0.60,
+  "threshold_fpr002": 0.98,
   "preprocessing": {
     "center_square_crop": true,
     "resize": 256,
