@@ -11,7 +11,7 @@ AI Art detector
 ## Setup
 ```bash
 
-git clone https://github.com/YOURNAME/athene.git
+git clone https://github.com/crwuBlyea/Athene.git
 cd athene
 
 py -m venv venv
